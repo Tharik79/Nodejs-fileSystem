@@ -2,6 +2,16 @@ const fs = require('fs');
 const http = require('http');
 const path = require('path')
 
+const express = require('express');
+const res = require('express/lib/response');
+const app = express();
+const PORT = 9000;
+ 
+app.get('/', function (request, response) {
+  response.send("Hello 🌏😀");
+});
+ 
+
 
 
 http.createServer(function (req,res)  {
