@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const http = require('http');
 const path = require('path')
@@ -5,12 +6,15 @@ const path = require('path')
 const express = require('express');
 const res = require('express/lib/response');
 const app = express();
-const PORT = 9000;
+const PORT = process.env.PORT; // this code for heroku to autoassign the port after deploy there.
+// const PORT = 9000; // change this to above code before deploy to heroku.
  
 app.get('/', function (request, response) {
   response.send("Hello 🌏😀");
 });
  
+app.listen(PORT, () => console.log("App is started in", PORT)
+);
 
 
 
@@ -53,6 +57,6 @@ fs.writeFile(`./SampleFolder/currentDate-time.txt`, `${dateObj.toDateString()}`,
 
   
 
-} ).listen(9000);
+} );
 
 
