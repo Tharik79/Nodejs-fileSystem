@@ -10,6 +10,8 @@ heroku API endpoints:
 
 https://nodejs-filesystem2.herokuapp.com/currentTimeStamp
 
+https://nodejs-filesystem2.herokuapp.com/txtfiles
+
 
 Github Url:
 
